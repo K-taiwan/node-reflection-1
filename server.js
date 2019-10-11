@@ -93,18 +93,34 @@ app.post('/api/v1/students', (req,res)=>{
   });
 });
 
+//update
+app.put('/api/v1/students/:studentId', (req,res) => {
+  db.Student.findByIdAndUpdate(req.params.studentId, req.body, {new: true}, (error, updateStudent) => {
+    if (error) console.log(error);
+    res.json({
+      status: 200,
+      count: 1,
+      data: updateStudent,
+      requestedAt: new Date().toLocaleString()
+    });
+  });
+});
+
+
+
 //delete
 app.delete('/api/v1/students/:studentId', (req, res) => {
   db.Student.findByIdAndDelete(req.params.studentId, (error, deletedStudent) => {
-      if (error) console.log(error)
+      if (error) console.log(error);
       res.json({
           status: 200,
           count: 1,
           data: deletedStudent,
-          dateRequested: new Date().toLocaleString()
-      })
-  })
-})
+          requestedAt: new Date().toLocaleString()
+      });
+  });
+});
+
 
 
 // Cohort Routes
