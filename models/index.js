@@ -7,5 +7,10 @@ mongoose.connect(DB_URL, {
   useCreateIndex: true,
   useUnifiedTopology: true 
 })
-  .then(() => console.log('MongoDB connected...'))
+  .then(() => console.log('MongoDB connected...Winner Winner Chicken Dinner!!!!!!!!!!!!'))
   .catch((err) => console.log(err));
+
+  module.exports = {
+    Student: require('./Student'),
+  
+  };
