@@ -6,32 +6,43 @@
 - Remember to run `npm install` to install all dependencies. 
 
 ## Prompt
-You will be building a small full-stack application with two resources. We have built some of the base to get you started.
-
+You will be building a small full-stack application starting with one resource. We have built some of the base to get you started.
 
 ### Back End
 Your Models will include the following:
-- Cohort
-    - name: string
-    - description: string
-    - startDate: date
-- Student
-    - name:string
-    - email: string
-    - cohorts: [ref:Cohort]
-    - age: number
 
-Student resources must reference one or more cohorts in their data structure.
+- Student
+    - name: string
+    - email: string
+    - age: number
+    - hobbies: []
+
 
 #### Routes
-You will be creating Full CRUD functionality for Cohorts and Students. 
+You will be creating Full CRUD functionality for Students. 
 You will be handeling All of the following: 
 - Index (Show all)
 - Show (Show One)
 - Update (Modify One)
 - Delete (Remove One)
 
-You will great a single route that will serve an index.html with a public folder. 
+
+#### Bonus 
+Add a Cohort resource with the following:
+
+- Cohort
+    - name: string
+    - description: string
+    - startDate: date
+
+Using referencing add an array of cohorts to your Student Model
+
+- Student
+    - name:string
+    - email: string
+    - cohorts: [ref:Cohort]
+    - age: number
+
 
 ### Front End
 

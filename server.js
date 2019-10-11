@@ -8,7 +8,7 @@ const app = express();
 //---------------------------------MIDDLEWARE
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 //-------------------------------CONFIGURATION VARIABLES
 const PORT = process.env.PORT || 3000;
@@ -21,9 +21,10 @@ app.get('/',  (req, res) => {
   res.sendFile('views/index.html' , { root : __dirname});
 });
 
-// Class Routes
-
 // Student Routes
+
+// Cohort Routes
+
 
 // ------------------------------ Start Server
 app.listen(PORT, () => console.log(`Listening at http://localhost:${PORT}/`));
