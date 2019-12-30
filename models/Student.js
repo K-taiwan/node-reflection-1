@@ -5,7 +5,13 @@ const StudentSchema = new Schema({
     name: String,
     email: String,
     age: Number,
-    hobbies: [String]
+    hobbies: [String],
+    cohorts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Cohort'
+        }
+    ]
 });
 
 const Student = mongoose.model('Student', StudentSchema);

@@ -12,5 +12,5 @@ mongoose.connect(DB_URL, {
 
   module.exports = {
     Student: require('./Student'),
-  
+    Cohort: require('./Cohort'),
   };
